@@ -1,0 +1,307 @@
+<p>&lt;center&gt;&lt;img src=&quot;https://jfqcza.bn1.livefilestore.com/y2paqP_3uagi8J3WlP4-pNt4kJoOzRKmuohSQUsrjaegIaoNbNZJ7EXLEflIO6XYAOKM6scpKxbtXPg10RL5OO3A9bc6m-zERVRHUYB1OEGq8s/Concur_Logo_VT_Color_500px.png?psid=1&quot; width=&quot;190px&quot; /&gt;&lt;/center&gt;
+
+</p>
+<h2 id="what-is-sap-concur-">What is SAP Concur?</h2>
+<p>SAP Concur is a travel and expense software solution that lets 25M business travelers book their travel, capture expense, submit expense reports, and more.  Concur processes over 55 million transactions every year, representing $50 billion spend on T&amp;E.</p>
+<p>&lt;center&gt;<br>&lt;img src=&quot;https://jfqcza.bn1.livefilestore.com/y2prf7yXWtqtcsjpFh2XXu6XQ7ppeIg8SqyBAFEUIcqwGG-TQz1vpZhxx6ac2ySbguL5EAsg0IerEzlUQRynANwyVmyt9dUxWWwNS-x75NX248/Screen%20Shot%202014-05-31%20at%2012.02.06%20PM.png?psid=1&quot; /&gt;&lt;/center&gt;
+
+</p>
+<h2 id="what-can-i-do-with-concur-apis-">What can I do with Concur APIs?</h2>
+<p>The <strong>Travel/Itinerary API (v1.1)</strong> lets you access a Concur user&#39;s itinerary, including hotel/flight booking info.  As an example, you can mash-up the Itinerary API with a restaurant database/API to provide recommendations of places to eat near a Concur user&#39;s hotel booking.</p>
+<p>The <strong>Expense API (v3.0)</strong> allows you to get (and push) a Concur user&#39;s expense information, including expense line items, their types (e.g. food, lodging), totals, and even receipt images.</p>
+<p>Here&#39;s an example on how to get an Itinerary List of a Concur user:</p>
+<pre><code>curl https://www.concursolutions.com/api/travel/trip/v1.1
+-H &quot;Authorization: OAuth &lt;insert your access token here&gt;&quot;
+</code></pre><p>To get an expense summary by using the Expense Report Digest API:</p>
+<pre><code>curl https://www.concursolutions.com/api/v3.0/expense/reportdigests
+-H &quot;Authorization: OAuth &lt;insert your access token here&gt;&quot;
+-H &quot;Accept: application/json&quot;
+</code></pre><p><strong>To get an access token</strong> (or learn how to generate one), please click <a href="#token">here</a> to advance to the section below.</p>
+<p>You can interact with the API using Swagger <a href="https://www.concursolutions.com/api/docs/index.html">here</a></p>
+<p>&lt;a href=&quot;https://www.concursolutions.com/api/docs/index.html&quot;&gt;&lt;img src=&quot;https://jfqcza.bn1.livefilestore.com/y2phbDjCiRKZp3Btneho4UncjWK46iv8GFhyKdTZ7xJJ9BCJ-JJiNrw7ieCenHdSGPgEZL0Tj7IYjGypUv61u3KdIrjj0dAUM35DjC3cPzLls0/Screen%20Shot%202014-05-31%20at%202.09.43%20PM.png?psid=1&quot; width=&quot;610px&quot; /&gt;&lt;/a&gt;</p>
+<p>For the Itinerary APIs (v1.1), full API documentation, and apps that use the APIs, please refer to:</p>
+<p><a href="https://developer.concur.com/get-started/webservices-overview">https://developer.concur.com/get-started/webservices-overview</a></p>
+<h2 id="-a-name-mashup-ideas-for-a-concur-powered-business-travel-app-a-">&lt;a name=&quot;mashup&quot;&gt;Ideas for a Concur-powered business travel app:&lt;/a&gt;</h2>
+<p>Check out the Concur main prize and mashup category prizes in this <a href="#prizes">link</a></p>
+<table>
+<thead>
+<tr>
+<th>Mash-up</th>
+<th>Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Concur + Yodlee</strong></td>
+<td>Mashup <a href="https://developer.yodlee.com/Hackathons/Disrupt_SF_2014">Yodlee&#39;s Aggregation API</a> and Concur&#39;s Itinerary API to filter transactions related to the trip. A report can then be generated showing spend trends. (<strong>BONUS prize</strong>: +1 more free pass worth $99 to The Perfect Trip DevCon)</td>
+</tr>
+<tr>
+<td><strong>Concur + Pebble</strong></td>
+<td>Use Pebble to confirm if purchase is personal or business - <a href="https://developer.getpebble.com/blog/2014/09/03/Pebble-Concur-Mojio/">see car mileage expense sample code here</a> (<strong>BONUS prize</strong>: 5 Pebble smartwatches to winning team)</td>
+</tr>
+<tr>
+<td><strong>Concur + Twilio</strong></td>
+<td>Call/SMS a <a href="http://www.twilio.com/">Twilio</a> number to submit your expense (voice through AVR or SMS) (<strong>BONUS prize</strong>: 3 x Google Chromecast)</td>
+</tr>
+<tr>
+<td><strong>Concur + Mashery</strong></td>
+<td>Mashup Concur with any <a href="http://dev.mashery.com/iodocs">Mashery API</a> listed in their API Explorer (<strong>BONUS prize</strong>: $100 Amazon gift card)</td>
+</tr>
+<tr>
+<td><strong>Concur + Moxtra</strong></td>
+<td>Use <a href="http://www.moxtra.com/developer/?utm_source=TC&amp;utm_medium=banner&amp;utm_content=logo&amp;utm_campaign=TCD">Moxtra&#39;s Clip or Draw modules</a> to add context when sending an image receipt to Concur (e.g. Instead of typing in the total value in an image receipt, user can instead draw a circle around the total value which can then be processed/extracted faster by the receiving backend); Use Moxtra Chat SDK to create space to chat, share images, itinerary, expense reports, etc. with travel group (<strong>BONUS prize</strong>: Free 1-year Moxtra SDK service if app is commercialized after hackathon)</td>
+</tr>
+<tr>
+<td><strong>Concur + Sinch</strong></td>
+<td>When recommending places to eat near a user&#39;s hotel booking, users could click a button to call the restaurant in-app (using <a href="http://www.sinch.com/docs/overview/">Sinch</a>) and make a reservation or ask a question about the food. (<strong>BONUS</strong> prize: $500 of Sinch calling credit)</td>
+</tr>
+<tr>
+<td><strong>Concur + EvoSnap</strong></td>
+<td>Create a simple POS application that sent the payment/transaction data to <a href="http://evosnap.com">EVO Snap*</a> and also to Concur. (<strong>BONUS</strong> prize: Limited edition EvoSnap jacket)</td>
+</tr>
+<tr>
+<td><strong>Concur + Weather Wunderground</strong></td>
+<td>Predict <a href="http://www.wunderground.com/weather/api/">weather</a> using Concur traveler&#39;s destination and date; Cross-match Concur expenses with weather (e.g. Allows company to identify/allocate expense budget based on upcoming weather)</td>
+</tr>
+<tr>
+<td><strong>Concur + Esri</strong></td>
+<td>Use <a href="https://developers.arcgis.com/">Esri&#39;s</a> different mapping layers/functionalities to add visual context to a Concur user&#39;s destination (e.g. POIs that match a Concur user&#39;s expense habits - coffee shops)</td>
+</tr>
+<tr>
+<td><strong>Concur + Evernote</strong></td>
+<td>Image receipts saved in an <a href="http://dev.evernote.com/">Evernote</a> folder are OCR&#39;d and sent to Concur as Quick Expense. Image files are also automatically uploaded to Concur&#39;s <a href="https://www.concursolutions.com/api/docs/index.html#!/ReceiptImages">ReceiptImage API</a></td>
+</tr>
+<tr>
+<td><strong>Concur + Microsoft</strong></td>
+<td>Use <a href="http://microsoftventures.com/">Windows Azure</a> as backend for Concur app </td>
+</tr>
+<tr>
+<td><strong>Concur + Clover</strong></td>
+<td>Display QR code to <a href="https://www.clover.com/docs">Clover</a> POS reader to send purchase as expense to Concur</td>
+</tr>
+<tr>
+<td><strong>Concur + Spark</strong></td>
+<td>Use Concur itinerary data to alert IoT devices hooked to <a href="https://www.spark.io/">Spark Core Kit</a> in hotel room to set themselves according to user&#39;s preference (e.g. When person walks in, lights adjust and an automatic request for shaving kit is sent out)</td>
+</tr>
+<tr>
+<td><strong>Concur + IBM Bluemix</strong></td>
+<td>Use <a href="http://ibm.biz/HackBluemix">IBM Bluemix</a> backend to run Concur apps</td>
+</tr>
+<tr>
+<td><strong>Concur + DigitalOcean</strong></td>
+<td>Use <a href="https://www.digitalocean.com/">DigitalOcean</a> to power your Concur apps</td>
+</tr>
+<tr>
+<td><strong>Concur + Golgi</strong></td>
+<td>Use <a href="http://www.golgi.io/">Golgi</a> to get realtime updates of a Concur user&#39;s Itinerary (e.g. instant notification to a travel app when a Concur user makes a new flight/hotel booking)</td>
+</tr>
+<tr>
+<td><strong>Concur + Mastercard</strong></td>
+<td>Use smartwatch to confirm if <a href="http://developer.mastercard.com/">Mastercard</a> purchase line item should be sent to Concur as expense (or ignored if personal purchase)</td>
+</tr>
+<tr>
+<td><strong>Concur + Nexmo</strong></td>
+<td>At the end of your business trip, automatically send your boss an email on how much money you saved the company by accepting SMS/calls through your <a href="https://www.nexmo.com/">Nexmo</a> number.</td>
+</tr>
+<tr>
+<td><strong>Concur + Paypal</strong></td>
+<td>Provide functionality to pick <a href="http://www.paypal.com/">PayPal</a> purchases and send to Concur as expense</td>
+</tr>
+<tr>
+<td><strong>Concur + Twitter</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Concur + Yammer</strong></td>
+<td>Coordinate group travel by pulling Concur itinerary API and dynamically creating a group in <a href="https://developer.yammer.com/restapi/">Yammer</a> tied to flight date and destination</td>
+</tr>
+</tbody>
+</table>
+<p>Find more app ideas <a href="#example">here</a></p>
+<h2 id="-a-name-prizes-prizes-a-">&lt;a name=&quot;prizes&quot;&gt;Prizes&lt;/a&gt;</h2>
+<ul>
+<li><strong>Best Use of Concur API -- Up to $2,500 in Amazon Gift Cards</strong> – For an app that demonstrates the best use of Concur APIs; prize distribution is $500 to each winning team member.</li>
+<li><strong>Best Use of Concur API + Co-Sponsor API On-stage - Free passes to <a href="https://developer.concur.com/devcon?utm_source=Blog_Evang&amp;utm_medium=blog&amp;utm_campaign=DevConBlogs">The Perfect Trip DevCon 2014</a> ($99 per ticket)</strong> - For teams (2 tickets per team) that demonstrate the best of the Concur API + co-sponsor API onstage. For example, best use of Concur + Yodlee, Best use of Concur + Pebble, and so on. <strong>Applies to all Disrupt co-sponsors listed in <a href="#mashup">mashup list above</a></strong>. All contestants can also apply to pitch their app for a shot at $100K in prizes. (<a href="https://developer.concur.com/devcon/PerfectTripFundAwards">https://developer.concur.com/devcon/PerfectTripFundAwards</a>)</li>
+</ul>
+<h2 id="-a-name-addl-additional-information-a-">&lt;a name=&quot;addl&quot;&gt;Additional Information&lt;/a&gt;</h2>
+<p>The subsections below provide a more detailed information on how to:</p>
+<ul>
+<li><a href="#token">Generate an access token</a></li>
+<li><a href="#dummy">POST/GET dummy data to/from Concur</a></li>
+<li><a href="#samplecode">Sample code</a></li>
+<li><a href="#example">Example apps in the App Center and previous hackathons</a></li>
+<li><strong>Stuck?</strong>  Contact Chris!<ul>
+<li><em>chris.ismael@concur.com</em></li>
+<li><em>@ConcurAPI</em> or <em>@chrispogeek</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="-a-name-token-generate-an-access-token-a-"> &lt;a name=&quot;token&quot;&gt;<strong>Generate an access token</strong>&lt;/a&gt;</h2>
+<ol>
+<li><p><strong>Get your Consumer Key</strong>  </p>
+<p>After logging in to <a href="http://concursolutions.com">http://concursolutions.com</a>, go to Administration -&gt; Register Partner Application -&gt; Concur Partner Application (Modify).  We need the consumer key so we can call the endpoint that would return the access token. </p>
+<p>&lt;img src=&#39;http://chrispogeek.files.wordpress.com/2014/01/untitled.png&#39; width=&quot;600px&quot; /&gt;</p>
+</li>
+<li><p><strong>Call the access token request endpoint</strong></p>
+<p>Here&#39;s what the HTTP call looks like to request for an access token:</p>
+<p>  GET <a href="https://www.concursolutions.com/net2/oauth2/accesstoken.ashx">https://www.concursolutions.com/net2/oauth2/accesstoken.ashx</a> HTTP 1.1<br>  Authorization: Basic am9obl9kZXZlbG90bWFpbC5jb206VHJhdmVsJkV4cGVuc2UkMjAxMg==<br>  X-ConsumerKey: eZByXv2X41cJlC21pSVvRi    </p>
+<p>Note that we already have <code>X-ConsumerKey</code> from number 1.  To generate the <code>Authorization: Basic</code> value, you need to Base64-encode the login ID, colon and password such that john_developer@hotmail.com:Travel&amp;Expense$2012 becomes am9obl9kZXZlbG90bWFpbC5jb206VHJhdmVsJkV4cGVuc2UkMjAxMg==.  If you&#39;re not doing this programmatically yet, you can use this <a href="http://www.base64encode.org/">nifty web tool</a> to generate that value (remember to choose Encode).</p>
+<p>If you&#39;re using a Terminal, an equivalent curl statement of the above would be:</p>
+<p>  curl <a href="https://www.concursolutions.com/net2/oauth2/accesstoken.ashx">https://www.concursolutions.com/net2/oauth2/accesstoken.ashx</a><br>  -H &quot;Authorization: Basic am9obl9kZXZlbG90bWFpbC5jb206VHJhdmVsJkV4cGVuc2UkMjAxMg==&quot;<br>  -H &quot;X-ConsumerKey: eZByXv2X41cJlC21pSVvRi&quot;</p>
+<p>If the call is successful, you should get an XML response with a <code>&lt;Token&gt;</code> node.  That&#39;s your access token. We recommend that you use <a href="http://www.getpostman.com/">Postman</a>, a Chrome extension, to help you manage your API calls (not just Concur ones).  Here&#39;s what the API calls look like in Postman:</p>
+<p>&lt;img src=&#39;http://chrispogeek.files.wordpress.com/2014/01/screen-shot-2014-01-13-at-4-45-35-pm.png&#39; width=&quot;600px&quot; /&gt;</p>
+</li>
+<li><p><strong>Call the APIs to pull expense report items</strong></p>
+<p>After getting an access token, we can pull dummy data from the Expense Report Digest, like so (in Terminal):</p>
+<p>  curl <a href="https://www.concursolutions.com/api/v3.0/expense/reportdigests">https://www.concursolutions.com/api/v3.0/expense/reportdigests</a><br>  -H &quot;Authorization: OAuth &lt;insert your access token here&gt;&quot;</p>
+<p>This would return an Expense Report response, with a field called <code>ID</code>.  We need this ID to extract the expense line items we created in the app earlier.  To liven things up a bit, let&#39;s use the <a href="https://www.concursolutions.com/api/docs/index.html#!/Entries">Swagger</a> documentation of the &quot;Entries&quot; API to get the individual expense line items:</p>
+<p>&lt;img src=&#39;https://jfqcza.bn1302.livefilestore.com/y2pExFhXefF7BWcggCWbeRkUyOUyEf1UdRi0HoCcpj8PKfaGMub-K8xc0BXHsX2NUFlNp54-m6X3aJ7dRNLQiIHfyYJhdtTiEJEArnZJ-r7NCA/Screen%20Shot%202014-04-22%20at%201.21.55%20PM.png?psid=1&#39; width=&quot;600px&quot; /&gt;</p>
+<p>We highlighted two things here, the (oval) field where you put in your access token, and the (rectangle) field where you put in the <code>ID</code> we got from the previous API call.  Note that we can do this same call in curl, or in any fashion you want.  Swagger just provides us a consolidated way to make the API calls.</p>
+<p>To execute the call, click the &quot;Try it out!&quot; button.  You should get a response like this below:</p>
+<p>&lt;img src=&#39;https://jfqcza.bn1304.livefilestore.com/y2pty6lMBv5XXLjA_mT5HLpSNea4hVr3AUCRuEI207Wr1otLVxy86klHYuNDP0N-cvb75IFJvicR1jR2K7X3wqJXsH_AQNcEWkp6iO4t3jXRCs/Screen%20Shot%202014-04-22%20at%201.29.22%20PM.png?psid=1&#39; width=&quot;600px&quot; /&gt;</p>
+<p><strong>Note: The steps demonstrated above follow the OAuth Native Flow.  If you prefer something similar to a Facebook login experience, you can check out the OAuth Web Flow <a href="https://developer.concur.com/api-documentation/oauth-20-0">here</a></strong></p>
+</li>
+</ol>
+<p><a href="#addl">Back to Top</a></p>
+<h2 id="-a-name-dummy-post-get-dummy-data-to-from-concur-the-api-or-app-a-">&lt;a name=&quot;dummy&quot;&gt;<strong>POST/GET dummy data to/from Concur - the API or app</strong>&lt;/a&gt;</h2>
+<ol>
+<li><p><strong>Pushing dummy data to Concur using the API</strong>  </p>
+<p>POST a dummy Itinerary to Concur:</p>
+<pre><code> Request Type = POST
+ Authorization = OAuth &lt;your access token&gt;
+ URI = https://www.concursolutions.com/api/travel/trip/v1.1/
+ ContentType = Application/XML
+ Body = 
+  &lt;?xml version=&quot;1.0&quot;?&gt;
+  &lt;Itinerary xmlns=&quot;http://www.concursolutions.com/api/travel/trip/2010/06&quot;&gt;
+  &lt;TripName&gt;TechCrunch Disrupt Concur&lt;/TripName&gt;
+  &lt;StartDateLocal&gt;2014-10-30T03:47:14&lt;/StartDateLocal&gt;
+  &lt;EndDateLocal&gt;2014-11-06T03:47:14&lt;/EndDateLocal&gt;
+  &lt;Bookings&gt;
+   &lt;Booking&gt;
+    &lt;Segments&gt;
+        &lt;Hotel&gt;
+            &lt;Status&gt;HK&lt;/Status&gt;
+            &lt;StartCityCode&gt;SFO&lt;/StartCityCode&gt;
+            &lt;StartDateLocal&gt;2014-10-30T07:47:14&lt;/StartDateLocal&gt;
+            &lt;EndDateLocal&gt;2014-11-06T03:47:14&lt;/EndDateLocal&gt;
+            &lt;Name&gt;Times Square Hilton New York&lt;/Name&gt;
+            &lt;RecordLocator&gt;Hotel Locator&lt;/RecordLocator&gt;
+            &lt;RoomDescription&gt;1 KING BED ACCESSIBLE ROOM - K1RRC&lt;/RoomDescription&gt;
+            &lt;Currency&gt;USD&lt;/Currency&gt;
+            &lt;CancellationPolicy&gt;Cxl 1 day prior to Arrival&lt;/CancellationPolicy&gt;
+            &lt;DailyRate&gt;240.3500&lt;/DailyRate&gt;
+            &lt;NumRooms&gt;1&lt;/NumRooms&gt;
+            &lt;NumPersons&gt;1&lt;/NumPersons&gt;
+            &lt;RateCode&gt;LV4&lt;/RateCode&gt;
+            &lt;Charges&gt;
+                &lt;Rate&gt;
+                    &lt;Currency&gt;USD&lt;/Currency&gt;
+                    &lt;Amount&gt;10.00&lt;/Amount&gt;
+                    &lt;StartDatelocal&gt;2014-05-30T07:47:14&lt;/StartDatelocal&gt;
+                    &lt;IsPrimary&gt;false&lt;/IsPrimary&gt;
+                    &lt;SemanticsCode&gt;ROOMRATE&lt;/SemanticsCode&gt;
+                    &lt;PerUnit&gt;DAY&lt;/PerUnit&gt;
+                    &lt;NumUnits&gt;3.00&lt;/NumUnits&gt;
+                &lt;/Rate&gt;
+            &lt;/Charges&gt;
+        &lt;/Hotel&gt;
+    &lt;/Segments&gt;
+    &lt;RecordLocator&gt;Disrupt123&lt;/RecordLocator&gt;
+    &lt;BookingSource&gt;Sample Itin for Disrupt&lt;/BookingSource&gt;
+    &lt;DateBookedLocal&gt;2014-10-30T03:47:14&lt;/DateBookedLocal&gt;
+  &lt;/Booking&gt;
+  &lt;Booking&gt;
+    &lt;Segments&gt;
+        &lt;Air&gt;
+            &lt;Vendor&gt;AA&lt;/Vendor&gt;
+            &lt;FlightNumber&gt;425&lt;/FlightNumber&gt;
+            &lt;StartCityCode&gt;SFO&lt;/StartCityCode&gt;
+            &lt;StartDateLocal&gt;2014-10-30T03:47:14&lt;/StartDateLocal&gt;
+            &lt;EndCityCode&gt;NYC&lt;/EndCityCode&gt;
+            &lt;EndDateLocal&gt;2014-11-30T07:47:14&lt;/EndDateLocal&gt;
+            &lt;Cabin&gt;O&lt;/Cabin&gt;
+            &lt;ClassOfService&gt;O&lt;/ClassOfService&gt;
+        &lt;/Air&gt;
+    &lt;/Segments&gt;
+    &lt;RecordLocator&gt;Air Locator&lt;/RecordLocator&gt;
+    &lt;BookingSource&gt;Sample Itin for Disrupt&lt;/BookingSource&gt;
+    &lt;DateBookedLocal&gt;2014-10-30T03:47:14&lt;/DateBookedLocal&gt;
+  &lt;/Booking&gt;
+&lt;/Bookings&gt;
+&lt;/Itinerary&gt;
+</code></pre><p><strong>Hack tip :</strong> More details on the Itinerary API v1.1. <a href="https://developer.concur.com/api-documentation/web-services/itinerary/itinerary-resource/itinerary-resource-get">here</a></p>
+<p>POST Expense Report Header to Concur: </p>
+<pre><code>Request Type = POST
+Authorization = OAuth &lt;your access token&gt;
+URI = https://www.concursolutions.com/api/expense/expensereport/v1.1/report
+ContentType = Application/XML
+Body = 
+&lt;Report xmlns=&quot;http://www.concursolutions.com/api/expense/expensereport/2011/03&quot;&gt;
+    &lt;Name&gt;Disrupt Hackathon NYC Trip&lt;/Name&gt;
+    &lt;Purpose&gt;All Hackathon Expenses&lt;/Purpose&gt;
+    &lt;Comment&gt;Includes hotel and meals.&lt;/Comment&gt;
+    &lt;OrgUnit1&gt;US&lt;/OrgUnit1&gt;
+    &lt;OrgUnit3&gt;Bellevue&lt;/OrgUnit3&gt;
+    &lt;Custom1&gt;Client&lt;/Custom1&gt;
+    &lt;Custom2&gt;Local&lt;/Custom2&gt;
+    &lt;UserDefinedDate&gt;2014-05-01 15:15:07.0&lt;/UserDefinedDate&gt;
+&lt;/Report&gt;
+</code></pre><p><strong>Hack tip 1:</strong> You can POST using JSON by setting the header to <code>Content-Type:application/json</code> and checking out a sample JSON body in our <a href="https://www.concursolutions.com/api/docs/index.html#!/Entries">Swagger</a> doc.  Note that the examples here use v1.1, and those shown in Swagger use v3.0.</p>
+<p><strong>Hack tip 2</strong>: You need to generate a report header to be able to submit an expense entry.  A collection of entries is a report.</p>
+<p><em>Click <a href="https://developer.concur.com/api-documentation/web-services/expense-report">here</a> to view the relationship of an Expense Report Header to an Expense Report Entry and search for <strong>Expense Report Processes</strong>.   </em></p>
+<p>GET Expense Report Details:</p>
+<pre><code>Request Type = GET
+Authorization = OAuth &lt;your access token&gt;
+URI = https://www.concursolutions.com/api/expense/expensereport/v2.0/Reports/?reportcountry=US
+ContentType = Application/JSON
+</code></pre><p>POSTing Expense Report Entry:</p>
+<pre><code>Request Type = POST
+Authorization = OAuth &lt;your access token&gt;
+URI = https://www.concursolutions.com/api/expense/expensereport/v1.1/report/B6F4FD62FB424911A3B8/entry
+ContentType = Application/XML
+Body = 
+&lt;ReportEntries xmlns=&quot;http://www.concursolutions.com/api/expense/expensereport/2011/03&quot;&gt;
+&lt;Expense&gt;
+    &lt;CrnCode&gt;USD&lt;/CrnCode&gt;
+    &lt;ExpKey&gt;BRKFT&lt;/ExpKey&gt;
+    &lt;Description&gt;Starbucks for Breakfast&lt;/Description&gt;
+    &lt;TransactionDate&gt;2014-05-01&lt;/TransactionDate&gt;
+    &lt;TransactionAmount&gt;15.54&lt;/TransactionAmount&gt;
+    &lt;Comment&gt;Breakfast meeting&lt;/Comment&gt;
+    &lt;VendorDescription&gt;Starbucks&lt;/VendorDescription&gt;
+    &lt;IsPersonal&gt;N&lt;/IsPersonal&gt;
+&lt;/Expense&gt;
+&lt;/ReportEntries&gt; 
+</code></pre></li>
+<li><p><strong>Pushing dummy expense data to Concur using the app</strong></p>
+<p>You can access the web version of Concur at <a href="http://concursolutions.com/">http://concursolutions.com/</a> or get the mobile app from <a href="https://itunes.apple.com/us/app/concur-travel-receipts-expense/id335023774?mt=8">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.concur.breeze">Google Play</a>.</p>
+<p>&lt;center&gt;<br>&lt;img src=&quot;https://jfqcza.bn1.livefilestore.com/y2prf7yXWtqtcsjpFh2XXu6XQ7ppeIg8SqyBAFEUIcqwGG-TQz1vpZhxx6ac2ySbguL5EAsg0IerEzlUQRynANwyVmyt9dUxWWwNS-x75NX248/Screen%20Shot%202014-05-31%20at%2012.02.06%20PM.png?psid=1&quot; /&gt;&lt;/center&gt;
+
+</p>
+<p>You can view/add new expenses (and even add a receipt image!) to have a variety of data to pull for your API calls. After adding expenses, you can create a report to associate it with by tapping the &quot;Add to Report&quot; button (in the last screenshot above).</p>
+</li>
+</ol>
+<p><a href="#addl">Back to Top</a></p>
+<h2 id="-a-name-samplecode-sample-code-a-">&lt;a name=&quot;samplecode&quot;&gt;Sample code&lt;/a&gt;</h2>
+<ul>
+<li><a href="https://developer.getpebble.com/blog/2014/09/03/Pebble-Concur-Mojio/">Pebble SDK C/Javascript</a></li>
+<li><a href="https://github.com/ismaelc/Concur-Windows8-SampleCode">Windows 8 C#/XAML</a></li>
+<li><a href="https://github.com/concurtech/mobile-samples">Objective-C/iOS</a></li>
+<li><a href="https://github.com/concurtech/api-samples">C#</a></li>
+<li><a href="https://gist.github.com/dberke711/c8d0c9e04c7e76220d4e">C#</a> (Generate access token native flow)</li>
+<li><a href="http://runnable.com/UtWlKVi9ZnsnAABx/upload-receipts-to-concur-using-php-curl">PHP/curl</a> (POST image receipts)</li>
+<li><a href="https://gist.github.com/Trudeaucj/09c25e79c332e93703a0">Python</a> (Generate access token)</li>
+<li><a href="https://github.com/sckuo/node-concur">node.js</a></li>
+<li>Java using <a href="https://github.com/Trudeaucj/Concur-java-examples">Maven</a> or <a href="https://github.com/Trudeaucj/Concur-java-examples-gradle">Gradle</a></li>
+</ul>
+<h2 id="-a-name-example-example-apps-a-">&lt;a name=&quot;example&quot;&gt;Example apps&lt;/a&gt;</h2>
+<p>All app integrations with Concur can be found in the <a href="https://www.concur.com/en-us/app-center">App Center</a>.  Below are just two examples that would hopefully give you an idea on what to build:</p>
+<ul>
+<li><p><a href="https://www.concur.com/en-us/partners/transaction-capture/traveltext">TravelText</a> - TravelText allows you to text your expenses right into Concur. No more paper receipts and Excel sheet mayhem!  Check out their video demo <a href="https://www.youtube.com/watch?v=sxY_PO-QKZ0">here</a>.</p>
+</li>
+<li><p><a href="https://www.concur.com/en-us/app-center/listing/nDhf34TiiC9RCocFM2xViin5c/Trover">Trover</a> - it&#39;s travel photography + business travel integration in one great app. Quoting from this <a href="http://skift.com/2013/07/25/travel-photography-app-trover-secures-2-5-million-in-funding-from-concur/#/0">article</a>, what they get for integrating with Concur is <em>&quot;being able to tap into Concur’s experience, knowledge and “great visibility into travel patterns”&quot;</em>.</p>
+</li>
+</ul>
+<p><a href="http://challengepost.com/software/built-with/concur">Challengepost</a> also lists Concur API integrations from previous hackathons.  Definitely worth checking out!</p>
+<p><a href="#addl">Back to Top</a></p>
