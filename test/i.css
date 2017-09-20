@@ -1,0 +1,68 @@
+h1 {}
+h1 img {}
+
+table {}
+table tbody {}
+table tbody tr {}
+table tbody tr td {}
+table tbody tr td img {}
+table tbody tr td h1 {}
+table tbody tr td h1 strong {}
+//center not yet supported
+//center not yet supported
+
+h2 {}
+
+p {}
+//center not yet supported
+
+img {}
+//center not yet supported
+p strong {}
+
+pre {}
+pre code {}
+p a {}
+p a img {}
+h2 a {}
+table tbody tr td strong {}
+table tbody tr td a {}
+
+ul {}
+ul li {}
+ul li strong {}
+ul li strong a {}
+ul li a {}
+ul li p {}
+ul li p strong {}
+ul li ul {}
+ul li ul li {}
+//noscript not yet supported
+//noscript not yet supported
+//noscript not yet supported
+//noscript not yet supported
+//noscript not yet supported
+//noscript not yet supported
+
+ol {}
+ol li {}
+ol li strong {}
+p img {}
+p code {}
+//noscript not yet supported
+//noscript not yet supported
+p strong a {}
+h2 strong {}
+ol li p {}
+ol li p strong {}
+ol li pre {}
+ol li pre code {}
+ol li p a {}
+ol li p code {}
+ol li p em {}
+ol li p em a {}
+ol li p em strong {}
+//center not yet supported
+//center not yet supported
+ul li p a {}
+ul li p em {}
